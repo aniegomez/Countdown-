@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import "mixin";
+
+
+*,*:after,*:before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+   p{
+       font-family: 'Monserrat',sans-serif;
+   }
+}
+img{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;   
+}

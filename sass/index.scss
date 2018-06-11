@@ -1,0 +1,45 @@
+@import "config";
+
+.main{
+    &__background{
+        display: flex;
+        height: 350px;
+        background-image: url('../images/pic01.jpg');
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 18;
+        }
+        &__title{
+        
+            z-index: 20;
+            font-size: 30px;
+            font-style:verdana;
+            color: white;
+            
+        }
+        &__time{
+        
+            z-index: 20;
+            font-size: 30px;
+            font-style:verdana;
+            color: white;
+            text-align: center;
+            
+        }
+    }
+    
+
+    
+}
+
+

@@ -1,0 +1,44 @@
+$screen: "only screen";
+// Extra small screen / phone
+$screen-xs:                  576px;
+$screen-xs-min:              $screen-xs - 1;
+// Small screen / tablet
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+// Medium screen / desktop
+$screen-md:                  992px;
+$screen-md-min:              $screen-md;
+// Large screen / wide desktop
+$screen-lg:                  1200px;
+$screen-lg-min:              $screen-lg;
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+@mixin phone {
+    @media (max-width: $screen-xs-min)  {
+        @content;
+    }
+}
+@mixin landscape_phone {
+    @media (min-width: #{$screen-xs}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$screen-sm}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$screen-md}) {
+        @content;
+    }
+}
+@mixin large_desktop {
+    @media (min-width: #{$screen-lg}) {
+        @content;
+    }
+}
+
+
